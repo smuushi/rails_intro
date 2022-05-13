@@ -58,7 +58,8 @@ return a course's prereq (if it has one). You should get `nil` for
 `Course.first.prerequisite` and the "Ruby 101" `Course` for
 `Course.second.prerequisite`.
 
-That didn't seem too tricky, did it? Ah, but now try to create a course without a prerequisite:
+That didn't seem too tricky, did it? Ah, but now try to create a course without
+a prerequisite:
 
 ```rb
 Course.create!(name: 'Ruby for Beginners', instructor: User.second)
