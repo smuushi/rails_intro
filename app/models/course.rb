@@ -20,5 +20,18 @@ class Course < ApplicationRecord
         foreign_key: :course_id
     )
 
+    has_many(
+        :enrolled_students,
+        through: :enrollments,
+        source: :student
 
+    )
+
+    has_many(
+        :prerequisite,
+        class_name: :Course,
+        foreign_key: :id,
+        primary_key: :prereq_id
+
+    )
 end
