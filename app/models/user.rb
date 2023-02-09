@@ -17,4 +17,12 @@ class User < ApplicationRecord
         primary_key: :id
     )
 
+    has_many(
+        :cour, 
+        class_name: :Course, 
+        primary_key: :id,
+        foreign_key: :instructor_id
+
+    )
+
 end

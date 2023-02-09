@@ -20,6 +20,14 @@ class Course < ApplicationRecord
         foreign_key: :course_id
     )
 
+    belongs_to(
+        :instructor, 
+        class_name: :User,
+        primary_key: :id, 
+        foreign_key: :instructor_id
+
+    )
+
     has_many(
         :enrolled_students,
         through: :enrollments,
